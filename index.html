@@ -25,7 +25,7 @@
             background-attachment: fixed; /* 背景固定，讓滑動時更有層次感 */
             color: var(--text-white);
             font-family: 'Noto Sans TC', sans-serif; /* 內文使用黑體，較易於手機閱讀 */
-            line-height: 1.7; /* 【調整】增加行高，提升手機閱讀舒適度 */
+            line-height: 1.7; /* 增加行高，提升手機閱讀舒適度 */
             padding-bottom: 60px;
             -webkit-font-smoothing: antialiased; /* 讓字體在 iOS 上更平滑 */
         }
@@ -39,35 +39,35 @@
         .container {
             max-width: 600px; /* 限制最大寬度，確保在平板/電腦上也不會太寬 */
             margin: 0 auto;
-            padding: 20px 16px; /* 【調整】手機版左右留白稍微縮小一點，讓內容區大一點 */
+            padding: 20px 16px; /* 手機版左右留白 */
         }
 
         /* --- 頭圖區域 --- */
         .header-section {
             text-align: center;
-            margin-bottom: 35px; /* 【調整】稍微減少與下方卡片的距離 */
+            margin-bottom: 35px;
         }
         
         .profile-img {
             width: 100%; /* 確保在手機上滿版 */
-            max-width: 400px; /* 限制最大寬度，避免在平板上過大 */
+            max-width: 400px; /* 限制最大寬度 */
             height: auto;
             border-radius: 20px;
             box-shadow: 0 0 25px rgba(255, 159, 67, 0.2); /* 橘色微光 */
             border: 2px solid rgba(255, 159, 67, 0.3);
             margin-bottom: 20px;
             object-fit: cover;
-            display: block; /* 修正圖片底部可能出現的微小空隙 */
-            margin-left: auto; /* 讓圖片在設置了 max-width 後仍能置中 */
+            display: block; /* 修正圖片底部空隙 */
+            margin-left: auto; /* 置中 */
             margin-right: auto;
         }
 
         /* --- 文字標題 --- */
         .main-title {
-            font-size: 1.5rem; /* 【調整】手機版標題稍微縮小，避免換行過多 */
+            font-size: 1.5rem; /* 手機版標題大小適中 */
             color: var(--accent-orange);
             font-weight: 700;
-            margin: 0; /* 重置 margin */
+            margin: 0;
             text-shadow: 0 0 10px rgba(255, 159, 67, 0.5); /* 發光特效 */
             letter-spacing: 1px;
             line-height: 1.4;
@@ -78,10 +78,10 @@
             background: var(--card-bg);
             border: var(--border-glow);
             border-radius: 16px;
-            padding: 20px; /* 【調整】手機版內距稍微縮小 */
+            padding: 20px;
             margin-bottom: 25px;
-            backdrop-filter: blur(10px); /* 毛玻璃效果 (吃效能，但在現代手機上效果好) */
-            -webkit-backdrop-filter: blur(10px); /* 支援 iOS Safari */
+            backdrop-filter: blur(10px); /* 毛玻璃效果 */
+            -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
@@ -96,17 +96,17 @@
 
         .info-row {
             display: flex;
-            margin-bottom: 18px; /* 【調整】增加行距，避免手指誤觸 */
-            align-items: flex-start; /* 讓圖標對齊第一行文字頂部 */
+            margin-bottom: 18px; /* 增加行距，避免手指誤觸 */
+            align-items: flex-start;
         }
         
         .info-icon {
             flex-shrink: 0;
             width: 24px;
-            margin-right: 16px; /* 【調整】增加圖標與文字的間距 */
+            margin-right: 16px;
             text-align: center;
             font-size: 1.1rem;
-            padding-top: 2px; /* 微調圖標垂直位置 */
+            padding-top: 2px;
         }
 
         .info-content {
@@ -125,7 +125,7 @@
         .info-value {
             font-size: 1.05rem;
             color: #eee;
-            display: block; /* 確保數值獨佔一行 */
+            display: block;
         }
 
         .note {
@@ -141,7 +141,7 @@
             background: linear-gradient(45deg, #e67e22, #f39c12);
             color: white;
             text-decoration: none;
-            padding: 12px 24px; /* 【調整】增加按鈕觸控區域 */
+            padding: 12px 24px; /* 增加按鈕觸控區域 */
             border-radius: 50px;
             font-weight: bold;
             margin-top: 15px;
@@ -149,7 +149,7 @@
             box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
             font-size: 0.95rem;
             text-align: center;
-            width: fit-content; /* 讓按鈕寬度適應內容 */
+            width: fit-content;
         }
         .btn:active { /* 手機版點擊效果 */
             transform: scale(0.98);
@@ -176,33 +176,33 @@
 
         .schedule-item {
             display: flex;
-            margin-bottom: 20px; /* 【調整】增加流程間距 */
+            margin-bottom: 20px; /* 增加流程間距 */
             position: relative;
         }
 
         .time {
             width: 50px;
-            flex-shrink: 0; /* 防止時間被壓縮 */
+            flex-shrink: 0;
             font-weight: bold;
             color: var(--accent-orange);
-            font-family: monospace; /* 使用等寬字體讓時間對齊更整齊 */
+            font-family: monospace; /* 使用等寬字體讓時間對齊 */
             font-size: 1.1rem;
             text-align: right;
             padding-right: 15px;
-            padding-top: 2px; /* 微調時間垂直位置 */
+            padding-top: 2px;
         }
 
         .event {
             padding-left: 20px;
             padding-bottom: 10px;
-            flex-grow: 1; /* 讓事件內容填滿剩餘空間 */
+            flex-grow: 1;
         }
         
         /* 時間軸上的圓點 */
         .event::before {
             content: '';
             position: absolute;
-            left: 51px; /* 調整圓點位置，需與時間線對齊 */
+            left: 51px;
             top: 10px;
             width: 10px;
             height: 10px;
@@ -210,19 +210,19 @@
             border: 2px solid var(--accent-orange);
             border-radius: 50%;
             z-index: 1;
-            box-shadow: 0 0 5px rgba(255, 159, 67, 0.5); /* 增加圓點發光感 */
+            box-shadow: 0 0 5px rgba(255, 159, 67, 0.5);
         }
 
         .highlight-event {
             color: #fff;
             font-weight: bold;
-            font-size: 1.15rem; /* 【調整】重要事件字體加大 */
+            font-size: 1.15rem; /* 重要事件字體加大 */
             text-shadow: 0 0 10px rgba(255,255,255,0.3);
         }
 
         /* --- Open Mic 區塊 --- */
         .open-mic-box {
-            background: rgba(255, 159, 67, 0.08); /* 稍微降低透明度 */
+            background: rgba(255, 159, 67, 0.08);
             border-left: 4px solid var(--accent-orange);
             padding: 15px;
             border-radius: 0 10px 10px 0;
@@ -237,17 +237,17 @@
         }
         
         .instrument-tags {
-            margin-top: 12px; /* 【調整】增加與上方文字的距離 */
+            margin-top: 12px;
             display: flex;
             flex-wrap: wrap; /* 允許標籤換行 */
-            gap: 8px; /* 使用 gap 控制標籤間距 */
+            gap: 8px; /* 標籤間距 */
         }
         
         .instrument-tags span {
             display: inline-block;
             background: rgba(255,255,255,0.15);
-            padding: 6px 12px; /* 【調整】增加標籤的觸控與視覺大小 */
-            border-radius: 20px; /* 改為圓角 */
+            padding: 6px 12px; /* 增加標籤大小 */
+            border-radius: 20px; /* 圓角 */
             font-size: 0.85rem;
             color: #eee;
             border: 1px solid rgba(255,255,255,0.1);
@@ -264,7 +264,7 @@
             line-height: 1.8;
         }
 
-        /* 裝飾用的城市剪影 (保留，增加氛圍) */
+        /* 裝飾用的城市剪影 */
         .city-silhouette {
             position: fixed;
             bottom: 0;

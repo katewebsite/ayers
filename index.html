@@ -126,34 +126,42 @@
             font-size: 1.05rem;
             color: #eee;
             display: block;
+            margin-bottom: 4px;
         }
 
         .note {
             font-size: 0.85rem;
             color: var(--text-gray);
-            margin-top: 6px;
+            margin-top: 4px;
             line-height: 1.5;
         }
 
-        /* --- 按鈕 --- */
+        /* --- 按鈕 (修改為較小尺寸) --- */
         .btn {
-            display: inline-block;
+            display: inline-flex; /* 改為 flex 以便對齊圖示 */
+            align-items: center;
+            justify-content: center;
             background: linear-gradient(45deg, #e67e22, #f39c12);
             color: white;
             text-decoration: none;
-            padding: 12px 24px; /* 增加按鈕觸控區域 */
+            /* 【修改】縮小內距與字體 */
+            padding: 8px 16px; 
+            font-size: 0.85rem;
             border-radius: 50px;
             font-weight: bold;
-            margin-top: 15px;
+            margin-top: 10px; /* 按鈕間距 */
             transition: all 0.2s;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
-            font-size: 0.95rem;
-            text-align: center;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
             width: fit-content;
         }
         .btn:active { /* 手機版點擊效果 */
             transform: scale(0.98);
             filter: brightness(0.9);
+        }
+        /* 按鈕內圖示 */
+        .btn-icon {
+            margin-right: 6px;
+            font-size: 1rem;
         }
 
         /* --- 流程表 (時間軸) --- */
@@ -243,13 +251,14 @@
             gap: 8px; /* 標籤間距 */
         }
         
+        /* 【修改】標籤樣式調整 */
         .instrument-tags span {
             display: inline-block;
-            background: rgba(255,255,255,0.15);
-            padding: 6px 12px; /* 增加標籤大小 */
-            border-radius: 20px; /* 圓角 */
-            font-size: 0.85rem;
-            color: #eee;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 10px; /* 稍微縮小標籤內距 */
+            border-radius: 15px;
+            font-size: 0.8rem; /* 稍微縮小字體 */
+            color: #ddd; /* 顏色稍微調暗一點點，讓它不要太搶眼 */
             border: 1px solid rgba(255,255,255,0.1);
         }
 
@@ -320,13 +329,15 @@
                 <div class="info-icon">📍</div>
                 <div class="info-content">
                     <span class="info-label">地點 Location</span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=台北市中山區建國北路二段139號13樓之1" target="_blank" style="text-decoration: none;">
-                        <span class="info-value" style="color: #fff; border-bottom: 1px dashed #999;">Ayers Guitar 旗艦店 (台北)</span>
-                    </a>
-                    <div class="note">台北市中山區建國北路二段139號13樓之1</div>
                     
-                    <a href="https://www.instagram.com/reel/DSKC5SqDqH2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D" target="_blank" class="btn">
-                        查看演出空間 (Instagram)
+                    <div class="info-value">Ayers Guitar 旗艦店 (台北)</div>
+                    <div class="note" style="margin-bottom: 12px;">台北市中山區建國北路二段139號13樓之1</div>
+                    
+                    <a href="https://maps.app.goo.gl/sSB4TZik7vbtKRFX6" target="_blank" class="btn">
+                        <span class="btn-icon">🗺️</span> 導航至現場 (Google Maps)
+                    </a>
+                    <br> <a href="https://www.instagram.com/reel/DSKC5SqDqH2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D" target="_blank" class="btn">
+                        <span class="btn-icon">📷</span> 查看演出空間 (Instagram)
                     </a>
                 </div>
             </div>
@@ -369,12 +380,12 @@
                                 無須自備樂器，現場提供多款木吉他可選擇，想帶上自己的任何樂器也歡迎！
                             </div>
                             <div class="instrument-tags">
-                                <span>🎤 雙Vocal麥克風</span>
-                                <span>🎸 民謠/古典吉他</span>
-                                <span>🪘 金杯鼓</span>
-                                <span>📦 木箱鼓</span>
-                                <span>🎹 Keyboard</span>
-                                <span>🛸 手碟</span>
+                                <span>雙Vocal麥克風</span>
+                                <span>民謠/古典吉他</span>
+                                <span>金杯鼓</span>
+                                <span>木箱鼓</span>
+                                <span>Keyboard</span>
+                                <span>手碟</span>
                             </div>
                         </div>
                     </div>

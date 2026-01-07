@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>愛樂之夜 - 林俊齊首場個人演奏會</title>
+    <title>林俊齊首場個人演奏會</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /* --- 全域變數：提取自海報配色 --- */
@@ -22,22 +22,22 @@
             padding: 0;
             background-color: var(--bg-deep);
             background-image: linear-gradient(to bottom, var(--bg-gradient-top) 0%, var(--bg-deep) 100%);
-            background-attachment: fixed; /* 背景固定，讓滑動時更有層次感 */
+            background-attachment: fixed; /* 背景固定 */
             color: var(--text-white);
-            font-family: 'Noto Sans TC', sans-serif; /* 內文使用黑體，較易於手機閱讀 */
-            line-height: 1.7; /* 增加行高，提升手機閱讀舒適度 */
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.7;
             padding-bottom: 60px;
-            -webkit-font-smoothing: antialiased; /* 讓字體在 iOS 上更平滑 */
+            -webkit-font-smoothing: antialiased;
         }
 
         /* 標題字體 */
         h1, h2, h3, .serif {
-            font-family: 'Noto Serif TC', serif; /* 標題保留襯線體，增加質感 */
+            font-family: 'Noto Serif TC', serif;
         }
 
         /* --- 主容器 --- */
         .container {
-            max-width: 600px; /* 限制最大寬度，確保在平板/電腦上也不會太寬 */
+            max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px; /* 手機版左右留白 */
         }
@@ -49,26 +49,26 @@
         }
         
         .profile-img {
-            width: 100%; /* 確保在手機上滿版 */
-            max-width: 400px; /* 限制最大寬度 */
+            width: 100%;
+            max-width: 400px;
             height: auto;
             border-radius: 20px;
-            box-shadow: 0 0 25px rgba(255, 159, 67, 0.2); /* 橘色微光 */
+            box-shadow: 0 0 25px rgba(255, 159, 67, 0.2);
             border: 2px solid rgba(255, 159, 67, 0.3);
             margin-bottom: 20px;
             object-fit: cover;
-            display: block; /* 修正圖片底部空隙 */
-            margin-left: auto; /* 置中 */
+            display: block;
+            margin-left: auto;
             margin-right: auto;
         }
 
         /* --- 文字標題 --- */
         .main-title {
-            font-size: 1.5rem; /* 手機版標題大小適中 */
+            font-size: 1.5rem;
             color: var(--accent-orange);
             font-weight: 700;
             margin: 0;
-            text-shadow: 0 0 10px rgba(255, 159, 67, 0.5); /* 發光特效 */
+            text-shadow: 0 0 10px rgba(255, 159, 67, 0.5);
             letter-spacing: 1px;
             line-height: 1.4;
         }
@@ -80,7 +80,7 @@
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 25px;
-            backdrop-filter: blur(10px); /* 毛玻璃效果 */
+            backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
@@ -94,21 +94,13 @@
             font-size: 1.2rem;
         }
 
+        /* 調整後的資訊行，移除左側圖示空間 */
         .info-row {
             display: flex;
-            margin-bottom: 18px; /* 增加行距，避免手指誤觸 */
+            margin-bottom: 18px;
             align-items: flex-start;
         }
         
-        .info-icon {
-            flex-shrink: 0;
-            width: 24px;
-            margin-right: 16px;
-            text-align: center;
-            font-size: 1.1rem;
-            padding-top: 2px;
-        }
-
         .info-content {
             flex-grow: 1;
         }
@@ -136,32 +128,26 @@
             line-height: 1.5;
         }
 
-        /* --- 按鈕 (修改為較小尺寸) --- */
+        /* --- 按鈕 --- */
         .btn {
-            display: inline-flex; /* 改為 flex 以便對齊圖示 */
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(45deg, #e67e22, #f39c12);
             color: white;
             text-decoration: none;
-            /* 【修改】縮小內距與字體 */
-            padding: 8px 16px; 
+            padding: 8px 16px; /* 保持小巧尺寸 */
             font-size: 0.85rem;
             border-radius: 50px;
             font-weight: bold;
-            margin-top: 10px; /* 按鈕間距 */
+            margin-top: 10px;
             transition: all 0.2s;
             box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
             width: fit-content;
         }
-        .btn:active { /* 手機版點擊效果 */
+        .btn:active {
             transform: scale(0.98);
             filter: brightness(0.9);
-        }
-        /* 按鈕內圖示 */
-        .btn-icon {
-            margin-right: 6px;
-            font-size: 1rem;
         }
 
         /* --- 流程表 (時間軸) --- */
@@ -175,7 +161,7 @@
         .schedule-list::before {
             content: '';
             position: absolute;
-            left: 55px; /* 時間線的位置 */
+            left: 55px;
             top: 10px;
             bottom: 10px;
             width: 2px;
@@ -184,7 +170,7 @@
 
         .schedule-item {
             display: flex;
-            margin-bottom: 20px; /* 增加流程間距 */
+            margin-bottom: 20px;
             position: relative;
         }
 
@@ -193,7 +179,7 @@
             flex-shrink: 0;
             font-weight: bold;
             color: var(--accent-orange);
-            font-family: monospace; /* 使用等寬字體讓時間對齊 */
+            font-family: monospace;
             font-size: 1.1rem;
             text-align: right;
             padding-right: 15px;
@@ -224,7 +210,7 @@
         .highlight-event {
             color: #fff;
             font-weight: bold;
-            font-size: 1.15rem; /* 重要事件字體加大 */
+            font-size: 1.15rem;
             text-shadow: 0 0 10px rgba(255,255,255,0.3);
         }
 
@@ -247,18 +233,17 @@
         .instrument-tags {
             margin-top: 12px;
             display: flex;
-            flex-wrap: wrap; /* 允許標籤換行 */
-            gap: 8px; /* 標籤間距 */
+            flex-wrap: wrap;
+            gap: 8px;
         }
         
-        /* 【修改】標籤樣式調整 */
         .instrument-tags span {
             display: inline-block;
             background: rgba(255,255,255,0.1);
-            padding: 5px 10px; /* 稍微縮小標籤內距 */
+            padding: 5px 10px;
             border-radius: 15px;
-            font-size: 0.8rem; /* 稍微縮小字體 */
-            color: #ddd; /* 顏色稍微調暗一點點，讓它不要太搶眼 */
+            font-size: 0.8rem;
+            color: #ddd;
             border: 1px solid rgba(255,255,255,0.1);
         }
 
@@ -294,14 +279,13 @@
         <div class="header-section">
             <img src="image1.png" alt="林俊齊首場個人演奏會主視覺" class="profile-img">
             
-            <h1 class="main-title">愛樂之夜 ✦ 林俊齊首場個人演奏會</h1>
+            <h1 class="main-title">林俊齊首場個人演奏會</h1>
         </div>
 
         <div class="info-card">
             <h3 class="card-title serif">活動資訊 Information</h3>
             
             <div class="info-row">
-                <div class="info-icon">📅</div>
                 <div class="info-content">
                     <span class="info-label">日期 Date</span>
                     <span class="info-value">2026 / 01 / 23（五）</span>
@@ -309,7 +293,6 @@
             </div>
 
             <div class="info-row">
-                <div class="info-icon">⏰</div>
                 <div class="info-content">
                     <span class="info-label">時間 Time</span>
                     <span class="info-value">19:00 觀眾入場 / 19:30 演出開始</span>
@@ -317,7 +300,6 @@
             </div>
 
             <div class="info-row">
-                <div class="info-icon">🎫</div>
                 <div class="info-content">
                     <span class="info-label">票價 Ticket</span>
                     <span class="info-value">$250（預售）／ $350（現場）</span>
@@ -326,7 +308,6 @@
             </div>
 
             <div class="info-row">
-                <div class="info-icon">📍</div>
                 <div class="info-content">
                     <span class="info-label">地點 Location</span>
                     
@@ -334,10 +315,11 @@
                     <div class="note" style="margin-bottom: 12px;">台北市中山區建國北路二段139號13樓之1</div>
                     
                     <a href="https://maps.app.goo.gl/sSB4TZik7vbtKRFX6" target="_blank" class="btn">
-                        <span class="btn-icon">🗺️</span> 導航至現場 (Google Maps)
+                        導航至現場 (Google Maps)
                     </a>
-                    <br> <a href="https://www.instagram.com/reel/DSKC5SqDqH2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D" target="_blank" class="btn">
-                        <span class="btn-icon">📷</span> 查看演出空間 (Instagram)
+                    <br>
+                    <a href="https://www.instagram.com/reel/DSKC5SqDqH2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D" target="_blank" class="btn">
+                        查看演出空間 (Instagram)
                     </a>
                 </div>
             </div>
@@ -403,7 +385,7 @@
         </div>
 
         <div class="footer">
-            &copy; 2026 Ayers Acoustic Night. All rights reserved.<br>
+            © 2026 Ayers Acoustic Night. All rights reserved.<br>
             Ayers Guitar Flagship Store
         </div>
     </div>
